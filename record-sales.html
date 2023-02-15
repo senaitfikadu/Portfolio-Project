@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cafe Daily Sales record</title> 
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="navbar-dark bg-dark text-light row" style="padding: 1rem;">
+        <h1 style="text-align: left;" class="col-md-1 col-xs-1 col-sm-1">
+            
+            <a href="index.html" style="color: white;">
+                <i class="fa fa-coffee"></i>
+            </a>
+        
+        </h1>
+        <h1 style="text-align: center;" class="col-md-11 col-xs-11 col-sm-11">Cafe Daily Sales record</h1>
+    
+    </div>
+
+    <div class="employee-form">
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div class="row">
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <label>Name <span style="color: red;">*</span></label>
+                        <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="name" id="name" placeholder="Name of a food or drink" required>
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <label>Casher Name</label>
+                        <input type="text" name="casher_name" id="casher_name" placeholder="Enter the casher name here" required>
+                    </div>
+                </div>
+       
+                <div class="row">
+                        <div class="col-md-6 col-xs-6 col-sm-6">
+                            <label>Price</label>
+                            <input type="number" name="price" id="price" min="1" required>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-sm-6">
+                            <label>Quantity</label>
+                            <input type="number" name="quantity" id="quantity" min="1" required>
+                        </div>
+                   
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 col-sm-6">
+                            <label>Date</label>
+                            <input type="date" name="date" id="date" required/>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-sm-6">
+                            <label>Waiter name</label>
+                            <input type="text" name="waiter_name" id="waiter_name" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <label style="margin-bottom: 7px;">Description</label>
+                            <textarea name="description" id="description" rows="6"  style="resize: none;" class="col-md-12 col-xs-12 col-sm-12"></textarea>
+                        </div>
+                    </div>
+
+
+                <div  class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+		</div>
+
+		<br/>
+
+		<div class="table table-striped employees-table">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Casher Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Date</th>
+                            <th>Waiter Name</th>
+                            <th>Sub Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
