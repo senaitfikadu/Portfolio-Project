@@ -1,1 +1,3 @@
-# cafe-daily-record
+#portfolio project
+
+cafe's daily sales record
